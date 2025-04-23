@@ -18,7 +18,7 @@ class _SplashViewState extends State<SplashView> {
     return Center(
       child: Image.asset(
         'assets/splashlogo.png',
-        width: 200, // Adjust the size of the logo as needed
+        width: 200, 
         height: 200,
       ),
     );

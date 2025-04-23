@@ -1,8 +1,6 @@
-
-
 import 'package:get/get.dart';
-class BookDetailController extends GetxController {
 
+class BookDetailController extends GetxController {
   var title = ''.obs;
   var authorList = <String>[].obs;
   var subjects = <String>[].obs;
@@ -13,22 +11,19 @@ class BookDetailController extends GetxController {
   var coverUrl = ''.obs;
   var book = {}.obs;
 
-  //processes the book data
   void setBookDetails(Map<String, dynamic> bookData) {
     book.value = bookData;
 
     title.value = bookData['title'] ?? 'No title';
     authorList.value =
         (bookData['authors'] as List?)
-            ?.map(
-              (e) => e['name']?.toString() ?? '',
-            ) 
+            ?.map((e) => e['name']?.toString() ?? '')
             .toList() ??
         [];
 
     subjects.value =
         (bookData['subject'] as List<dynamic>?)
-            ?.map((e) => e.toString()) 
+            ?.map((e) => e.toString())
             .toList() ??
         [];
 
@@ -39,7 +34,6 @@ class BookDetailController extends GetxController {
             ? 'https://covers.openlibrary.org/b/id/${bookData['cover_id']}-L.jpg'
             : 'https://via.placeholder.com/150x200';
 
-  
     _classifyData();
   }
 

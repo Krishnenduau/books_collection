@@ -3,8 +3,6 @@ import 'package:books_collection/Components/common_button.dart';
 import 'package:books_collection/Components/shimmer_effect.dart';
 import 'package:books_collection/Constant/app_routs.dart';
 import 'package:books_collection/Views/Books_list/book_list_viewmodel.dart';
-
-import 'package:books_collection/Views/Favourites_book_list/favourites_view.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -45,7 +43,7 @@ class BookListView extends StatelessWidget {
         if (controller.books.isEmpty && controller.isLoading.value) {
           return LayoutBuilder(
             builder: (context, constraints) {
-              // Show shimmer effect when loading
+              // Show shimmer effect 
               return Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 16),
                 child: ListView.builder(

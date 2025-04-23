@@ -6,7 +6,7 @@ import 'package:get_storage/get_storage.dart';
 class BookListController extends GetxController {
   RxList<Map<String, dynamic>> books = <Map<String, dynamic>>[].obs;
   RxBool isLoading = false.obs;
-  RxInt currentPage = 0.obs; // Page number for pagination
+  RxInt currentPage = 0.obs; 
   RxMap<String, RxBool> favourites = <String, RxBool>{}.obs;
   final storage = GetStorage();
   final BookApiService _bookApiService = BookApiService();
@@ -27,7 +27,7 @@ class BookListController extends GetxController {
 
     isLoading.value = true;
 
-    // Call the BookApiService to fetch books
+    // Call the BookApiService 
     final newBooks = await _bookApiService.fetchBooks(
       offset: currentPage.value * 10,
     );
@@ -42,7 +42,7 @@ class BookListController extends GetxController {
   // Load more books when scrolled to the bottom
   void loadMore() {
     if (!isLoading.value) {
-      currentPage.value++; // Increment page number for the next batch
+      currentPage.value++; // Increment page number 
       fetchBooks();
     }
   }
@@ -58,7 +58,7 @@ class BookListController extends GetxController {
       SnackbarMessage.show('Added to favourites');
     }
 
-    // Persist favourites to local storage
+    // favourites to local storage
     storage.write(
       'favourites',
       favourites.entries.where((e) => e.value.value).map((e) => e.key).toList(),
