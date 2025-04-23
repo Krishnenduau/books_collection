@@ -5,6 +5,8 @@ Favourites are stored locally using GetStorage
 Mobile View: Uses a ListView.builder
 Tablet View: Uses a GridView.builder
 data is being loaded, a shimmer effect
+Map-based data passing. No model class required.
+
 
 Book list Screen 
 Features:
