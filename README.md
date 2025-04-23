@@ -1,16 +1,22 @@
-# books_collection
+GetX for state management 
+BookListController handles the business logic
+Pagination: lazyscrolling triggered when the user scrolls near the bottom of the list.
+Favourites are stored locally using GetStorage
+Mobile View: Uses a ListView.builder
+Tablet View: Uses a GridView.builder
+data is being loaded, a shimmer effect
 
-A new Flutter project.
+Book list Screen 
+Features:
+Display a list of books with pagination.
+Infinite scroll to load more books.
+Favourites system with local storage.
+Responsive UI
+Shimmer effect while loading books.
+Navigate to a favourites list page.
+Book details screen
+Fetching the Book ID- using key as a unique identifier for each book.
 
-## Getting Started
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+favourites screen
+Mark books as favourites.
+favourites using local storage-
